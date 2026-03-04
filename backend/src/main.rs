@@ -1,16 +1,20 @@
 use axum::{
     routing::get,
+    extract::Path,
+    Json,
     Router,
 };
+use serde::Serialize;
 use dotenvy::dotenv;
 use std::env;
 use sqlx::postgres::PgPoolOptions;
+
 #[tokio::main]
 async fn main() -> Result<(), Box<dyn std::error::Error>> {
 
     dotenv().ok();
 
-    let supabase_url = env::var("SUPABASE_URL").expect("SUPABASE_URL must be set in .env");
+    let supabase_url = env::var("DATABASE_URL").expect("DATABASE_URL must be set in .env");
 
     let pool = PgPoolOptions::new().max_connections(5).connect(&supabase_url).await?;
 

@@ -1,2 +1,11 @@
-/target
+# Rust
+target/
+**/*.rs.bk
+
+# Node / Frontend
+node_modules/
+dist/
 .env
+
+# OS files
+.DS_Store
