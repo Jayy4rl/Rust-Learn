@@ -3,11 +3,25 @@ name = "x402-Gateway-Rust"
 version = "0.1.0"
 edition = "2024"
 
+[[bin]]
+name = "facilitator"
+path = "src/facilitator.rs"
+
 [dependencies]
+
+x402-types = { version = "1.0", features = ["cli"] }
+x402-facilitator-local = { version = "1.0" }
+x402-chain-eip155 = { version = "1.0", features = ["facilitator"] }
+x402-chain-solana = { version = "1.0", features = ["facilitator"] }
+
 axum = "0.8.8"
+async-trait = "0.1"
 dotenvy = "0.15.7"
 serde = "1.0.228"
+serde_json = "1.0"
 sqlx = { version = "0.8", features = ["runtime-tokio", "tls-rustls", "postgres", "macros" ]}
 tokio = { version = "1.49.0", features = ["full"] }
 uuid = {version = "1.0", features = ["serde", "v4"] }
 chrono = {version = "0.4", features =["serde"] }
+rustls = {version = "0.23", features = ["ring"] }
+tower-http = "0.6.8"

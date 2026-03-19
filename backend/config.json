@@ -1,0 +1,21 @@
+{
+  "port": 8080,
+  "host": "0.0.0.0",
+  "chains": {
+    "solana:5eykt4UsFv8P8NJdTREpY1vzqKqZKvdp": {
+      "signer": "$SOLANA_PRIVATE_KEY",
+      "rpc": "https://api.mainnet-beta.solana.com",
+      "pubsub": "wss://api.mainnet-beta.solana.com"
+    }
+  },
+  "schemes": [
+    {
+      "id": "v1-solana-exact",
+      "chains": "solana:*"
+    },
+    {
+      "id": "v2-solana-exact",
+      "chains": "solana:*"
+    }
+  ]
+}

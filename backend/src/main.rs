@@ -1,3 +1,6 @@
+mod schemas;
+mod gateway;
+
 use axum::{
     routing::get,
     extract::Path,
