@@ -1,4 +1,3 @@
-use x402_types::scheme::X402SchemeFacilitatorBuilder;
 use x402_types::networks::USDC;
 use x402_chain_solana::{V1SolanaExact, KnownNetworkSolana};
 use x402_facilitator::chain::solana::SolanaProvider;
@@ -15,8 +14,6 @@ async fn main() -> Result<(), Box<dyn std::error::Error>>{
     let provider = SolanaProvider::from_env(Network::SolanaDevnet)
         .await?
         .expect("Solana devnet provider not configured — check env vars");
-
-    // let facilitator = V1SolanaExact.build(provider, None)?;
 
     let usdc = USDC::solana();
 
