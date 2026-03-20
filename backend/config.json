@@ -5,7 +5,9 @@
     "solana:5eykt4UsFv8P8NJdTREpY1vzqKqZKvdp": {
       "signer": "$SOLANA_PRIVATE_KEY",
       "rpc": "https://api.mainnet-beta.solana.com",
-      "pubsub": "wss://api.mainnet-beta.solana.com"
+      "pubsub": "wss://api.mainnet-beta.solana.com",
+      "max_compute_unit_limit": 400000,
+      "max_compute_unit_price": 1000000
     }
   },
   "schemes": [

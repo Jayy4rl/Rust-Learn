@@ -11,9 +11,9 @@ path = "src/facilitator.rs"
 
 x402-types = { version = "1.0", features = ["cli"] }
 x402-facilitator-local = { version = "1.0" }
-x402-chain-eip155 = { version = "1.0", features = ["facilitator"] }
 x402-chain-solana = { version = "1.0", features = ["facilitator"] }
 
+alloy-provider = "=1.0.7"
 axum = "0.8.8"
 async-trait = "0.1"
 dotenvy = "0.15.7"
@@ -25,3 +25,5 @@ uuid = {version = "1.0", features = ["serde", "v4"] }
 chrono = {version = "0.4", features =["serde"] }
 rustls = {version = "0.23", features = ["ring"] }
 tower-http = "0.6.8"
+x402-facilitator = "0.11.0"
+
